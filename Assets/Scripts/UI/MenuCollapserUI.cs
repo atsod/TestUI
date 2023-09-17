@@ -6,23 +6,19 @@ using UnityEngine.EventSystems;
 
 public class MenuCollapserUI : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
 {
-    private TextMeshProUGUI _textHighlighting;
+    [SerializeField] private GameObject _abilityPanel;
+    [SerializeField] private GameObject _downAbilityPanel;
 
-    private GameObject _abilityPanel;
-    private GameObject _downAbilityPanel;
-    
     private float _downPanelHeigh;
-
     private bool _isDownPanelActive;
+
+    private TextMeshProUGUI _textHighlighting;
 
     private void Awake()
     {
-        _textHighlighting = GetComponent<TextMeshProUGUI>();
-
-        _abilityPanel = GameObject.FindGameObjectWithTag("AbilityPanel");
-        _downAbilityPanel = _abilityPanel.transform.GetChild(1).gameObject;
-
         _downPanelHeigh = _downAbilityPanel.GetComponent<RectTransform>().rect.height;
+
+        _textHighlighting = GetComponent<TextMeshProUGUI>();
     }
 
     public void OnPointerEnter(PointerEventData eventData)

@@ -359,6 +359,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d851733641c9b7943b88d998324a1648, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _abilityPanel: {fileID: 608675688}
+  _downAbilityPanel: {fileID: 411711660}
 --- !u!224 &269506187 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1600307565537306522, guid: 4761d7ea0fe95ec4982fa9fdc9b86aa6, type: 3}
